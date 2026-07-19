@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #e5e5e7;
+      }
+
+      button {
+        margin: 2rem;
+      }
+
+      .btn {
+        padding: 24px 48px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #4a4a52;
+        background: rgb(234, 234, 234);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        border-radius: 999px;
+        cursor: pointer;
+
+        box-shadow:
+          10px 10px 20px rgba(234, 234, 234, 1),
+          -10px -10px 20px rgba(255, 255, 255, 0.9);
+        transition: all 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        background: rgb(227, 226, 238);
+        box-shadow:
+          12px 12px 24px rgb(227, 226, 238),
+          -12px -12px 24px rgba(255, 255, 255, 1);
+      }
+
+      .btn:active {
+        transform: translateY(1px);
+        box-shadow:
+          inset 4px 4px 8px rgba(0, 0, 0, 0.08),
+          inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Get Started</button>
+  </body>
+</html>
