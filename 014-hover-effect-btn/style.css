@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  font-family: Arial, sans-serif;
+}
+
+/* Button */
+.fill-btn {
+  position: relative;
+  padding: 15px 35px;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  /* Keeps the button content above the animation */
+  isolation: isolate;
+}
+
+/* The filling layer */
+.fill-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  /* Start with no width */
+  transform: scaleX(0);
+  /* Fill from left to right */
+  transform-origin: left;
+  /* Animation speed */
+  transition: transform 0.6s ease;
+  /* Put the layer behind the text */
+  z-index: -1;
+}
+/* Start filling when hovering */
+.fill-btn:hover::before {
+  transform: scaleX(1);
+}
+
+/* Change text color */
+.fill-btn:hover {
+  color: #111;
+}

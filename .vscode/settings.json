@@ -1,0 +1,4 @@
+{
+  "tailwindCSS.suggestions": true,
+  "tailwindCSS.experimental.config": "src/index.css"
+}
